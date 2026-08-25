@@ -51,7 +51,7 @@ SE-Labs-PES1UG24CS381/
     ├── 01_Requirements_Table.xlsx         # Formatted Excel sheet of requirements
     ├── 01_Requirements_Table.pdf          # PDF export of requirements
     │
-    ├── 02_UseCase_Diagram.puml            # PlantUML source code
+    ├── 02_UseCase_Diagram.svg             # Vector graphic of the diagram
     ├── 02_UseCase_Diagram.png             # Rendered PNG diagram
     ├── 02_UseCase_Diagram.pdf             # PDF version of the diagram
     │

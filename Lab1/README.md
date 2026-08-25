@@ -34,7 +34,7 @@ Please find the finalized deliverables below:
 * [01_Requirements_Table.pdf (PDF Document)](01_Requirements_Table.pdf) - Print-ready landscape PDF.
 
 ### 📊 UML Use-Case Diagram
-* [02_UseCase_Diagram.puml (PlantUML Source)](02_UseCase_Diagram.puml) - Source file using custom style settings.
+* [02_UseCase_Diagram.svg (Vector Graphic)](02_UseCase_Diagram.svg) - Vector source file of the diagram.
 * [02_UseCase_Diagram.png (Diagram Image)](02_UseCase_Diagram.png) - High-resolution rendered image.
 * [02_UseCase_Diagram.pdf (PDF Document)](02_UseCase_Diagram.pdf) - High-quality vector PDF of the diagram.
 
