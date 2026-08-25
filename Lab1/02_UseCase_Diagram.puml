@@ -1,0 +1,42 @@
+@startuml
+skinparam actorStyle awesome
+skinparam packageStyle rect
+skinparam BackgroundColor white
+skinparam RoundCorner 8
+skinparam Shadowing false
+skinparam ArrowColor #1F497D
+skinparam ActorBorderColor #1F497D
+skinparam ActorBackgroundColor #F2F5F8
+skinparam UsecaseBorderColor #1F497D
+skinparam UsecaseBackgroundColor #F2F5F8
+skinparam UsecaseFontName "Segoe UI"
+skinparam ActorFontName "Segoe UI"
+skinparam TitleFontName "Segoe UI"
+skinparam TitleFontSize 16
+skinparam TitleFontColor #1F497D
+
+title Patient Health Record Consent Management System (PHRCMS) - Use Case Diagram
+
+actor "Patient" as pat
+actor "Clinic Doctor" as doc
+actor "Clinic Administrator" as admin
+
+left to right direction
+
+rectangle "Patient Health Record Consent Management System" as boundary {
+    usecase "UC-01: Grant Time-Bounded Consent" as UC1
+    usecase "UC-02: Revoke Active Consent" as UC2
+    usecase "UC-03: View Consent Registry" as UC3
+    usecase "UC-04: Access Diagnostic Records" as UC4
+    usecase "UC-05: Manage Doctor Verification" as UC5
+    usecase "UC-06: Verify Active Consent" as UC6
+    
+    UC4 ..> UC6 : <<include>>
+}
+
+pat --> UC1
+pat --> UC2
+pat --> UC3
+doc --> UC4
+admin --> UC5
+@enduml
