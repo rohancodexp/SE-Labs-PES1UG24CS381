@@ -1,68 +1,31 @@
-# Patient Health Record Consent Management System (PHRCMS)
-## Software Engineering Lab 1 — Problem Statement #13 (Healthcare & Telemedicine)
+# Software Engineering Lab 1: Requirements Engineering & UML Use-Case Modelling
 
-This repository contains the deliverables for the **Software Engineering Lab 1** project. 
-
-The project centers on requirements engineering and use-case modeling for a patient-centric health data gateway where patients explicitly manage granular, time-bound consent permissions for clinics, diagnostic labs, and consulting doctors to access their medical history.
-
----
-
-## 1. System Scope & Boundary
-
-### In-Scope (PHRCMS)
-* **Consent Granting**: Allowing patients to grant access to specific diagnostic records to verified clinic doctors with an explicit expiration timestamp.
-* **Consent Revocation**: Allowing patients to terminate access early.
-* **Access Control**: Validating that active, unexpired consent exists before permitting a doctor to view a record.
-* **Audit Trail**: Logging all grant, revoke, and access events permanently in an append-only log.
-
-### Out-of-Scope (External)
-* Authentication/Identity management.
-* Direct hospital ERP functions (billing, appointments, prescriptions).
-* Storing full medical record details (only access metadata is handled).
+- **SRN**: PES1UG24CS381
+- **Scenario No**: 13
+- **Project Title**: Patient Health Record Consent Management System (PHRCMS)
+- **Primary Domain**: Healthcare & Telemedicine
+- **Target Actors**: Patient, Clinic Doctor, Clinic Administrator
 
 ---
 
-## 2. Actors & Stakeholders
+## Repository Contents
 
-1. **Patient (Primary)**: Grants/revokes consent, views active consents, and maintains full control over diagnostic records.
-2. **Clinic Doctor (Healthcare Provider)**: Requests and views diagnostic records when active, valid consent exists.
-3. **Clinic Administrator (Administrative Authority)**: Maintains trust in the system by verifying the credentials and registration status of clinic doctors.
-
----
-
-## 3. UML Use-Case Diagram
-
-![UML Use-Case Diagram](Lab1/02_UseCase_Diagram.png)
+* `PES1UG24CS381_LAB01.pdf` - Complete Lab 1 submission document containing Requirements Table, UML Use-Case Model details, embedded diagram, and Use-Case Flow Specification.
+* `requirements.md` - Complete Requirements Table with exactly 5 functional requirements and 2 non-functional requirements.
+* `use-case-flow.md` - One-page Use-Case Flow Specification for the core use case Grant Time-Bounded Consent.
+* `use-case-diagram.png` - Rendered UML Use-Case Diagram for the Patient Health Record Consent Management System.
+* `README.md` - Repository overview.
 
 ---
 
-## 4. Repository Structure
+## Requirements Traceability Matrix
 
-```text
-SE-Labs-PES1UG24CS381/
-│
-├── README.md                              # Root project overview
-│
-└── Lab1/
-    │
-    ├── README.md                          # Lab 1 specific guide
-    │
-    ├── 01_Requirements_Table.md           # Markdown version of requirements
-    ├── 01_Requirements_Table.xlsx         # Formatted Excel sheet of requirements
-    ├── 01_Requirements_Table.pdf          # PDF export of requirements
-    │
-    ├── 02_UseCase_Diagram.svg             # Vector graphic of the diagram
-    ├── 02_UseCase_Diagram.png             # Rendered PNG diagram
-    ├── 02_UseCase_Diagram.pdf             # PDF version of the diagram
-    │
-    ├── 03_UseCase_Flow_Specification.md   # Markdown version of flow spec
-    ├── 03_UseCase_Flow_Specification.docx # Word document (.docx) flow spec
-    └── 03_UseCase_Flow_Specification.pdf  # PDF version of the flow spec
-```
-
----
-
-## 5. Academic Details
-* **Student Name / USN**: Rohan (PES1UG24CS381)
-* **Subject**: Software Engineering Lab 1 (CS381)
-* **Domain**: Healthcare & Telemedicine (Consent Management)
+| Requirement | Use Case | Target Actor | Included Verification / Auditing |
+| :--- | :--- | :--- | :--- |
+| **FR-001** (Grant Consent) | `UC-01: Grant Time-Bounded Consent` | Patient | Patient enters verified doctor and future expiration |
+| **FR-002** (Revoke Consent) | `UC-02: Revoke Active Consent` | Patient | Triggers immediate revocation status update |
+| **FR-003** (Consent List) | `UC-03: View Consent Registry` | Patient | Real-time status list (active/expired/revoked) |
+| **FR-004** (Access Record) | `UC-04: Access Diagnostic Records` | Clinic Doctor | Enforces `UC-06: Verify Active Consent` check |
+| **FR-005** (Doctor Verification) | `UC-05: Manage Doctor Verification` | Clinic Administrator | Verification flag managed by clinic administrator |
+| **NFR-001** (Audit Trail) | Logging and Auditing | System | Appends to append-only log on grant, revoke, or access |
+| **NFR-002** (Response Latency) | `UC-06: Verify Active Consent` | System | Consent validation latency is constrained to < 500ms |
