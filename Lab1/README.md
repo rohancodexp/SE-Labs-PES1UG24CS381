@@ -18,11 +18,9 @@ We defined exactly 5 Functional Requirements (FRs) and 2 Non-Functional Requirem
 
 ---
 
-## 2. UML Use-Case Diagram Summary
+## 2. UML Use-Case Diagram
 
-* **Boundary**: Patient Health Record Consent Management System (PHRCMS)
-* **Actors**: Patient, Clinic Doctor, Clinic Administrator
-* **Key Relationship**: `UC-04` (Access Diagnostic Records) `«include»` `UC-06` (Verify Active Consent). Consent verification is mandatory for every access attempt.
+![UML Use-Case Diagram](02_UseCase_Diagram.png)
 
 ---
 

@@ -30,14 +30,9 @@ The project centers on requirements engineering and use-case modeling for a pati
 
 ---
 
-## 3. Main Use Cases
+## 3. UML Use-Case Diagram
 
-* **UC-01**: Grant Time-Bounded Consent (Patient)
-* **UC-02**: Revoke Active Consent (Patient)
-* **UC-03**: View Consent Registry (Patient)
-* **UC-04**: Access Diagnostic Records (Clinic Doctor)
-* **UC-05**: Manage Doctor Verification (Clinic Administrator)
-* **UC-06**: Verify Active Consent (System Use Case, included in `UC-04`)
+![UML Use-Case Diagram](Lab1/02_UseCase_Diagram.png)
 
 ---
 
