@@ -1,0 +1,11 @@
+# Office Temporary Files
+~$*.docx
+~$*.doc
+~$*.pptx
+~$*.xlsx
+*.tmp
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
