@@ -16,8 +16,8 @@ def add_due(flat, month, amount, history=None):
         history = []
 
     conn.execute(
-    "INSERT INTO dues VALUES (?, ?, ?, 0)",
-    (flat, month, amount),
+        "INSERT INTO dues VALUES (?, ?, ?, 0)",
+        (flat, month, amount),
     )
     history.append((flat, month))
     return history
@@ -41,7 +41,7 @@ def collect(flat, month):
 
 
 def evaluate_arithmetic(expression):
-    """Evaluate a restricted arithmetic expression without executing Python code."""
+    """Evaluate restricted arithmetic expressions safely."""
     if not isinstance(expression, str) or len(expression) > 100:
         raise ValueError("Invalid arithmetic expression")
 
